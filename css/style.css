@@ -1,0 +1,202 @@
+/* some reseting styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* make scroll smother */
+html {
+    scroll-behavior: smooth;
+}
+
+/* general style for all sections */
+section {
+    background-color: #333;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding-top: 10px;
+    color: aliceblue;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*  style for navigation bar */
+nav {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    height: 8vh;
+    padding: 0;
+    line-height: 8VH;
+    color: #e6e6e6;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+
+
+
+}
+
+#nav ul li {
+    list-style: none;
+}
+
+/*  style for responce mobile navigation bar */
+#responsiveNav {
+    flex-direction: column;
+    height: 8vh;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+/*  styling humburgar */
+.navBarLogoAndHumb {
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #616161;
+    align-items: center;
+    width: 100%;
+}
+
+.navBarLogoAndHumb .logo h2 {
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.navBarLogoAndHumb .hamb {
+    margin-right: 35px;
+}
+
+.navBarLogoAndHumb .hamb #line {
+    height: 3.5px;
+    width: 50px;
+    background-color: #e6e6e6;
+    transition: transform .5s ease-in-out;
+}
+
+
+
+
+#hambIcon {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+
+/*styling drop menue*/
+#responsiveNav .menu {
+    position: fixed;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100vw;
+    background-color: black;
+    transition: all .2s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: top;
+
+
+
+
+}
+
+#responsiveNav .menu ul li {
+    list-style: none;
+}
+
+#responsiveNav .menu ul li a:hover {
+    color: brown;
+
+}
+
+
+/*style class that show drop menue when hamb icon is cliced*/
+#responsiveNav .activehamb {
+    transform: scaleY(1);
+}
+
+/*animation when clicking on hamb icon */
+.navBarLogoAndHumb .hamb .line1 {
+    transform: rotate(45deg) translate(0px, 17px);
+}
+
+.navBarLogoAndHumb .hamb .line2 {
+    transform: scale(0)
+}
+
+.navBarLogoAndHumb .hamb .line3 {
+    transform: rotate(-45deg) translate(1px, -17px);
+}
+
+
+/*  specicilizing the even sections with another color */
+section:nth-child(even) {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+/* styling navigation bar links */
+nav a {
+    text-decoration: none;
+    color: #e6e6e6;
+}
+
+/* styling navigation bar links headings */
+nav a h2 {
+    padding: 0 15px 0 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+
+}
+
+/* styling hover effect navigation bar links headings */
+nav a h2:hover {
+    background-color: black;
+
+}
+
+/* styling active class when section is in viewport */
+.active {
+    background-color: brown;
+}
+
+#toTOp {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: brown;
+    position: fixed;
+    top: 90vh;
+    right: 5vw;
+    background: url(../assets/arrow.png);
+    background-position: center center;
+    background-size: contain;
+    transition: transform .3s ease-in-out;
+    cursor: pointer;
+}
+
+#toTOp:hover {
+    transform: translateY(-10px);
+}
